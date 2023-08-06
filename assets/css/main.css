@@ -2135,6 +2135,13 @@ ul.actions li:first-child {
 	margin-bottom: 0.2rem;
 }
 
+#poopoo12 {
+	font-size: 0.85rem;
+	font-weight: 0.85rem;
+	margin-left: 1.1rem;
+	margin-bottom: 0.2rem;
+}
+
 @keyframes moveUpAnimation {
 	0% {
 		transform: translateY(0);
