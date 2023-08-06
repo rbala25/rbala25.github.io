@@ -2102,6 +2102,49 @@ ul.actions li:first-child {
 	font-size: 6em;
 }
 
+#test {
+	text-decoration: none;
+	display: inline-block;
+	transition: transform 0.5s ease;
+}
+
+#test:hover {
+	animation: moveUpAnimation 0.5s forwards;
+}
+
+.sixthH {
+	color: rgb(135, 133, 133)
+}
+
+.ullis {
+	text-align: left;
+	font-size: 0.9rem;
+	font-weight: 0.9rem;
+}
+
+#poop {
+	font-size: 0.85rem;
+	font-weight: 0.85rem;
+	margin-left: 1.1rem;
+}
+
+#poopoo {
+	font-size: 0.85rem;
+	font-weight: 0.85rem;
+	margin-left: 1.1rem;
+	margin-bottom: 0.2rem;
+}
+
+@keyframes moveUpAnimation {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-2px);
+	}
+}
+
 /* Wrappers */
 
 .wrapper {
@@ -2341,7 +2384,6 @@ body>article {
 		height: 24em;
 		margin: 0;
 	}
-
 }
 
 /* Medium */
