@@ -2102,10 +2102,22 @@ ul.actions li:first-child {
 	font-size: 6em;
 }
 
+#test12 {
+	text-decoration: none;
+	display: inline-block;
+	transition: transform 0.5s ease;
+	font-size: 1.6rem;
+}
+
+#test12:hover {
+	animation: moveUpAnimation 0.5s forwards;
+}
+
 #test {
 	text-decoration: none;
 	display: inline-block;
 	transition: transform 0.5s ease;
+	font-size: 1.4rem;
 }
 
 #test:hover {
