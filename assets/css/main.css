@@ -746,6 +746,10 @@ body.landing.is-preload:after {
 	width: 70em;
 }
 
+#pp {
+	align-items: center;
+}
+
 .container.xsmall {
 	width: 17.5em;
 }
@@ -2888,6 +2892,15 @@ ul.actions.fit.stacked {
 	width: 75%;
 }
 
+#pmaj {
+	margin-bottom: 0.5em;
+}
+
+#poopoo12 {
+	margin-bottom: 0.1em;
+}
+
+
 /* Table */
 
 .table-wrapper {
@@ -4281,4 +4294,8 @@ body.is-touch #banner {
 		padding: 0;
 	}
 
+}
+
+.contentul {
+	text-align: left;
 }
