@@ -3957,9 +3957,9 @@ body.is-touch #banner {
 
 	/* Section/Article */
 
-	header p br {
+	/* header p br {
 		display: none;
-	}
+	} */
 
 	header h2+p {
 		font-size: 1em;
