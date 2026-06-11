@@ -4335,12 +4335,10 @@ body.is-touch #banner {
 		width: 11em;
 	}
 
-	/* Block-level banner content for proper full-width centering on tablet */
+	/* Remove the slight right-margin offset that was for the desktop side-by-side layout */
 	#banner .content {
-		display: block;
-		width: 100%;
-		max-width: 100%;
 		margin-right: 0;
+		max-width: 100%;
 	}
 
 	/* Cap button so it doesn't stretch across the whole tablet */
@@ -4405,14 +4403,39 @@ body.is-touch #banner {
 
 	/* ---- Banner ---- */
 
-	/* Profile photo — existing 9em is fine, just ensure it's crisp */
+	/* The original centering trick uses an inline-block ::before strut that's
+	   calc(100vh - 44px) tall. At 14pt, em-based paddings grow and the content
+	   can exceed the strut height, breaking vertical alignment on short phones.
+	   Replace with flexbox, which centers reliably at any font size or content height. */
+	#banner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* The strut pseudo-element is only needed for the inline-block trick — remove it */
+	#banner:before {
+		display: none;
+	}
+
+	/* Content becomes a block inside the flex container; use tighter padding
+	   than the default (4em top / 4.875em bottom at 12pt) which was too tall */
+	#banner .content {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 2.5em 1.5em 3em 1.5em;
+		text-align: center;
+	}
+
+	/* Profile photo */
 	#banner .content .image {
 		height: 9em;
 		width: 9em;
 		border: 2px solid rgba(255, 255, 255, 0.15);
 	}
 
-	/* Give the banner header text a bit more breathing room */
 	#banner .content header h2 {
 		font-size: 1.75em;
 		font-weight: 500;
