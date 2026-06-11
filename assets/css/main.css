@@ -4299,3 +4299,63 @@ body.is-touch #banner {
 .contentul {
 	text-align: left;
 }
+
+/* =====================================================
+   Mobile & Tablet Improvements
+   ===================================================== */
+
+/* Tablet (medium: 737–980px) */
+@media screen and (max-width: 980px) {
+
+	/* Landing page header scrolls off-screen by default — make it sticky on tablets */
+	body.landing #header {
+		background: rgba(39, 40, 51, 0.965);
+		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+		position: fixed;
+	}
+
+	body.landing #page-wrapper {
+		padding-top: 3.5em;
+	}
+
+	/* Scale down hero portrait for tablets (default is 18em, too large) */
+	#banner .content .image {
+		height: 12em;
+		width: 12em;
+	}
+
+	/* Block-level banner content for proper tablet centering */
+	#banner .content {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	/* Cap resume button width so it doesn't span the full tablet width */
+	.button1 {
+		max-width: 18em;
+	}
+
+}
+
+/* Phone (small: ≤736px) — header already hidden, titleBar takes over */
+@media screen and (max-width: 736px) {
+
+	/* Tighten resume button on small screens */
+	.button1 {
+		max-width: 14em;
+	}
+
+}
+
+/* XSmall (≤480px) */
+@media screen and (max-width: 480px) {
+
+	/* Better list readability on very small screens */
+	.contentul li {
+		line-height: 1.65;
+		margin-bottom: 0.3em;
+	}
+
+}
