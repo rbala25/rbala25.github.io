@@ -4301,13 +4301,14 @@ body.is-touch #banner {
 }
 
 /* =====================================================
-   Mobile & Tablet Improvements
+   Mobile & Tablet Responsive Overhaul
    ===================================================== */
 
-/* Tablet (medium: 737–980px) */
+/* ── Tablet (737–980px) ─────────────────────────── */
 @media screen and (max-width: 980px) {
 
-	/* Landing page header scrolls off-screen by default — make it sticky on tablets */
+	/* Landing header is position:absolute by default and scrolls away —
+	   pin it so navigation stays accessible on tablets */
 	body.landing #header {
 		background: rgba(39, 40, 51, 0.965);
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
@@ -4318,13 +4319,23 @@ body.is-touch #banner {
 		padding-top: 3.5em;
 	}
 
-	/* Scale down hero portrait for tablets (default is 18em, too large) */
-	#banner .content .image {
-		height: 12em;
-		width: 12em;
+	/* Slightly heavier text weight and better contrast on tablet */
+	body, input, select, textarea {
+		font-weight: 200;
+		color: rgba(255, 255, 255, 0.88);
 	}
 
-	/* Block-level banner content for proper tablet centering */
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 300;
+	}
+
+	/* Scale hero portrait down — default 18em is too large for a tablet */
+	#banner .content .image {
+		height: 11em;
+		width: 11em;
+	}
+
+	/* Block-level banner content for proper full-width centering on tablet */
 	#banner .content {
 		display: block;
 		width: 100%;
@@ -4332,30 +4343,203 @@ body.is-touch #banner {
 		margin-right: 0;
 	}
 
-	/* Cap resume button width so it doesn't span the full tablet width */
+	/* Cap button so it doesn't stretch across the whole tablet */
 	.button1 {
 		max-width: 18em;
 	}
 
 }
 
-/* Phone (small: ≤736px) — header already hidden, titleBar takes over */
+/* ── Phone (≤736px) ─────────────────────────────── */
 @media screen and (max-width: 736px) {
 
-	/* Tighten resume button on small screens */
+	/* ---- Typography: bigger, heavier, higher contrast ---- */
+
+	/* The base is font-weight:100 / 12pt — far too thin and small on a phone.
+	   Jump to 300 weight and 14pt so text is actually readable. */
+	body, input, select, textarea {
+		font-size: 14pt;
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.92);
+		line-height: 1.85em;
+	}
+
+	/* Headings: heavier weight so they stand out from body text */
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 500;
+		color: #ffffff;
+	}
+
+	h2 {
+		font-size: 1.75em;
+		letter-spacing: -0.01em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+	}
+
+	h4 {
+		font-size: 1.05em;
+	}
+
+	h5 {
+		font-size: 0.95em;
+	}
+
+	/* Slightly tighter paragraph spacing on small screens */
+	p {
+		margin: 0 0 1.4em 0;
+	}
+
+	/* ---- Lists ---- */
+
+	.contentul {
+		padding-left: 0.25em;
+	}
+
+	.contentul li {
+		margin-bottom: 0.55em;
+		line-height: 1.75;
+	}
+
+	/* ---- Banner ---- */
+
+	/* Profile photo — existing 9em is fine, just ensure it's crisp */
+	#banner .content .image {
+		height: 9em;
+		width: 9em;
+		border: 2px solid rgba(255, 255, 255, 0.15);
+	}
+
+	/* Give the banner header text a bit more breathing room */
+	#banner .content header h2 {
+		font-size: 1.75em;
+		font-weight: 500;
+	}
+
+	#banner .content header p {
+		font-size: 1em;
+		font-weight: 300;
+		opacity: 0.85;
+		line-height: 1.6;
+	}
+
+	/* ---- Spotlight sections ---- */
+
+	/* Reduce image height — 60vh is too much on a phone, leaves too little room
+	   for the text content and creates massive scrolling */
+	.spotlight .image.main {
+		max-height: 35vh !important;
+	}
+
+	/* More horizontal breathing room in spotlight text panels */
+	.spotlight .content {
+		padding: 2.75em 1.75em 2em 1.75em !important;
+	}
+
+	/* Section headings inside spotlights */
+	.spotlight .content header h2 {
+		font-size: 1.55em;
+		margin-bottom: 0.3em;
+	}
+
+	.spotlight .content header p {
+		font-size: 0.9em;
+		opacity: 0.75;
+		margin-bottom: 1.2em;
+	}
+
+	/* ---- Portfolio (wrapper section) ---- */
+
+	.wrapper {
+		padding: 3.5em 1.75em 2.5em 1.75em;
+	}
+
+	/* Slightly smaller icon circles in portfolio cards */
+	.icon.major {
+		height: 4.5em;
+		width: 4.5em;
+		line-height: 4.15em;
+		margin-bottom: 1em;
+	}
+
+	.icon.major:before {
+		font-size: 1.85em;
+	}
+
+	/* ---- Resume button ---- */
+
 	.button1 {
-		max-width: 14em;
+		max-width: 15em;
+		font-size: 0.95em;
+	}
+
+	/* ---- Mobile nav bar ---- */
+
+	#titleBar .title {
+		font-size: 1.05em;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+	}
+
+	/* ---- Footer ---- */
+
+	#footer .icons .icon.alt {
+		font-size: 1.3em;
+		margin: 0 0.15em;
 	}
 
 }
 
-/* XSmall (≤480px) */
+/* ── XSmall (≤480px) ────────────────────────────── */
 @media screen and (max-width: 480px) {
 
-	/* Better list readability on very small screens */
+	/* Pull font back down just slightly on very narrow screens */
+	body, input, select, textarea {
+		font-size: 13pt;
+		line-height: 1.8em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
+	/* Shrink portrait photo on tiny screens */
+	#banner .content .image {
+		height: 7.5em;
+		width: 7.5em;
+	}
+
+	/* Even shorter images in spotlight sections on tiny phones */
+	.spotlight .image.main {
+		max-height: 28vh !important;
+	}
+
+	/* Tighter spotlight content padding */
+	.spotlight .content {
+		padding: 2.25em 1.25em 1.75em 1.25em !important;
+	}
+
+	/* List items — a bit more spacing on small screens */
 	.contentul li {
-		line-height: 1.65;
-		margin-bottom: 0.3em;
+		margin-bottom: 0.6em;
+		line-height: 1.7;
+	}
+
+	/* Small portfolio icon */
+	.icon.major {
+		height: 4em;
+		width: 4em;
+		line-height: 3.65em;
+	}
+
+	.icon.major:before {
+		font-size: 1.65em;
 	}
 
 }
