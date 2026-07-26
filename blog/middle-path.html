@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>The Middle Path, I Think &mdash; Rishi Bala</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="icon" type="image/png" href="../pic100.ico" />
+	<style>
+		/* ── Layout ── */
+		#post {
+			padding: 9em 2em 7em;
+			min-height: 100vh;
+		}
+
+		.article-layout {
+			max-width: 74em;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 13em;
+			gap: 5em;
+			align-items: start;
+		}
+
+		/* ── Back link ── */
+		.article-back {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
+			font-size: 0.68em;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.28) !important;
+			border-bottom: 0 !important;
+			margin-bottom: 3em;
+			transition: color 0.2s ease-in-out;
+		}
+		.article-back:hover { color: #e44c65 !important; }
+		.article-back::before { content: '←'; font-size: 1.1em; }
+
+		/* ── Header ── */
+		.article-date {
+			font-size: 0.68em;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.28);
+			margin-bottom: 0.75em;
+		}
+
+		h2.article-title {
+			font-size: 2.6em;
+			line-height: 1.18em;
+			letter-spacing: -0.03em;
+			color: #ffffff;
+			font-weight: 300;
+			margin-bottom: 0;
+			padding-bottom: 1.1em;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		/* ── Body ── */
+		.article-body {
+			margin-top: 2.5em;
+			counter-reset: section;
+		}
+
+		.article-body > p {
+			font-size: 1.05em;
+			line-height: 1.95em;
+			color: rgba(255, 255, 255, 0.62);
+			margin-bottom: 1.4em;
+		}
+
+		/* Section headings */
+		.article-body h3 {
+			font-size: 1.2em;
+			font-weight: 400;
+			color: #ffffff;
+			letter-spacing: -0.01em;
+			margin: 3.25em 0 0.9em;
+			line-height: 1.4em;
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+			counter-increment: section;
+		}
+
+		.article-body h3::before {
+			content: counter(section, decimal-leading-zero) " ";
+			font-size: 0.6em;
+			letter-spacing: 0.1em;
+			color: #e44c65;
+			font-weight: 400;
+			margin-right: 0.5em;
+			vertical-align: middle;
+		}
+
+		.article-body em {
+			color: rgba(255, 255, 255, 0.78);
+			font-style: italic;
+		}
+
+		/* ── Closing ── */
+		.article-end {
+			margin-top: 4em;
+			padding-top: 2em;
+			border-top: 1px solid rgba(255, 255, 255, 0.07);
+		}
+
+		/* ── Table of Contents sidebar ── */
+		.toc {
+			position: sticky;
+			top: 8em;
+		}
+
+		.toc-label {
+			font-size: 0.62em;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.22);
+			margin-bottom: 1em;
+		}
+
+		.toc ol {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			counter-reset: toc;
+		}
+
+		.toc ol li {
+			counter-increment: toc;
+			margin-bottom: 0.6em;
+		}
+
+		.toc ol li a {
+			font-size: 0.72em;
+			line-height: 1.5em;
+			color: rgba(255, 255, 255, 0.3) !important;
+			border-bottom: 0 !important;
+			display: flex;
+			gap: 0.6em;
+			align-items: baseline;
+			transition: color 0.15s ease-in-out;
+		}
+
+		.toc ol li a::before {
+			content: counter(toc, decimal-leading-zero);
+			font-size: 0.85em;
+			color: rgba(228, 76, 101, 0.5);
+			flex-shrink: 0;
+		}
+
+		.toc ol li a:hover { color: #ffffff !important; }
+		.toc ol li a.toc-active { color: rgba(255, 255, 255, 0.75) !important; }
+
+		/* ── Mobile ── */
+		@media screen and (max-width: 860px) {
+			.article-layout { grid-template-columns: 1fr; gap: 0; }
+			.toc { display: none; }
+			h2.article-title { font-size: 1.9em; }
+			.article-body > p { font-size: 0.97em; }
+			.article-body h3 { font-size: 1.05em; }
+		}
+	</style>
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload landing">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1 id="logo"><a href="../index.html">Rishi Bala</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="../index.html#one">About</a></li>
+					<li><a href="../index.html#ipc">Experience</a></li>
+					<li><a href="../index.html#five">Portfolio</a></li>
+					<li><a href="../notes.html">Notes</a></li>
+					<li><a href="https://github.com/rbala25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/rishi-bala-443583258/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:rishibala2007@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="../images/Rishi Bala Resume.pdf" class="icon solid alt fa-file"><span class="label">Resume</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Post -->
+		<article id="post">
+			<div class="article-layout">
+
+				<!-- Main content -->
+				<div class="article-main">
+
+					<a href="../notes.html" class="article-back">Notes</a>
+
+					<p class="article-date">November 14, 2025</p>
+					<h2 class="article-title">The Middle Path, I Think</h2>
+
+					<div class="article-body">
+
+						<p>In ninth grade I took a class called Ancient World, and one of the few things I remember from that year is this one unit on Buddhism &mdash; specifically the idea of the middle path, the notion that the good life sits somewhere between extremes and that deprivation and indulgence are both wrong answers. I filed it away and moved on. It took me until pretty recently to realize I&rsquo;ve kind of been running that idea as a personal operating system ever since, without ever naming it.</p>
+
+						<h3 id="s1">The Grind Isn&rsquo;t Free</h3>
+						<p>I&rsquo;ve been able to see the investment banking lifestyle very closely my whole life, close enough to know exactly what it costs and exactly what it pays. Ninety hours a week, for years, and yes, eventually a lot of money. I have real respect for the people who do it, and I genuinely understand why they do. I just know I don&rsquo;t want it.</p>
+						<p>If I&rsquo;m grinding a hundred hours a week at twenty-three, I don&rsquo;t think I&rsquo;m maximizing anything except a number I&rsquo;ll be too burned out to enjoy. Not dramatically miserable, just the quiet kind, where your whole life is deferred to some future version of you that never actually arrives. Time is the most finite thing you have, and happiness is my actual goal. I&rsquo;ve believed that since high school and nothing has come close to updating it. The money down the road doesn&rsquo;t buy back the decade you spent getting there, and nobody hands you a refund on your twenties.</p>
+						<p>There&rsquo;s an old thought experiment I found in a pamphlet at a Phillies game about a fisherman and a businessman. The businessman finds the fisherman relaxing in the afternoon and lectures him: work harder, scale up, buy more boats, build an empire, and in thirty years you can retire and relax by the water. The fisherman points out that he&rsquo;s relaxing by the water right now. I think about that story a lot. The obvious reading is that the businessman is a fool, yet the honest reading is that most of us are the businessman, deferring the exact life we claim to be working toward, assuming the destination will still be there when we finally arrive.</p>
+
+						<h3 id="s2">Minimum Effort, Maximum Return</h3>
+						<p>My default model, if I&rsquo;m being honest, has always been something that sounds bad when you say it out loud: find the minimum effort that gets the maximum return. Engineering culture, finance culture, startup culture all run on the opposite religion, where the grind itself is virtuous, the hours are proof of seriousness, and anyone optimizing for efficiency instead of output must not want it badly enough.</p>
+						<p>I think that&rsquo;s mostly cope for people who never asked what the hours were actually buying them. Effort isn&rsquo;t valuable on its own. It&rsquo;s an input, not a result, and treating it like a moral achievement is how people end up proud of exhaustion. Being efficient about the things that don&rsquo;t matter isn&rsquo;t laziness &mdash; it&rsquo;s the only way to have anything left for the things that do.</p>
+						<p>Here&rsquo;s the part that keeps the model from being an excuse to coast: it&rsquo;s a binary, not a dial. When something doesn&rsquo;t genuinely catch me, I find the cleanest path through it and move on without much guilt. When something does catch, the calculation disappears entirely &mdash; the effort accounting stops existing as a concept.</p>
+						<p>My high school physics teacher used to joke to my friends that he was hiding from me, because every answer he gave me just spawned more questions, and every question eventually boiled down to the same thing: why, why, why. I couldn&rsquo;t leave anything half-understood. It wasn&rsquo;t discipline and it wasn&rsquo;t ambition either, it was closer to a compulsion &mdash; this feeling that once I&rsquo;d started pulling on a thread I physically could not stop until I&rsquo;d unraveled the whole thing. That same mode has shown up in everything I&rsquo;ve ever actually cared about: the late nights that didn&rsquo;t feel late, the projects that swallowed entire weeks where I forgot to be tired. The point was never working less. The point is knowing which mode you&rsquo;re supposed to be in, and not letting the wrong things trigger the expensive one.</p>
+
+						<h3 id="s3">Happiness Is Not Pleasure</h3>
+						<p>The Greeks had a word for something adjacent to this &mdash; <em>eudaimonia</em>, which gets translated as happiness but means something closer to flourishing, a life well lived as a whole rather than a sequence of pleasant moments. That distinction matters more than it seems.</p>
+						<p>Maximizing happiness sounds like hedonism if you read it as maximizing pleasure, and that was never the version I meant. A day of hard work on something you care about often contains very little pleasure and still counts as a good day. The obsessive stretches, the why-why-why spirals &mdash; none of that is comfortable in the moment, and all of it belongs in the flourishing column, at least for me. The middle path isn&rsquo;t between work and pleasure. It&rsquo;s between a life spent entirely in service of a future that may not come, and a life so comfortable that nothing in it ever mattered.</p>
+
+						<h3 id="s4">Which Wants Are Actually Yours</h3>
+						<p>The same balance shows up in the career math, just quieter. When I first got into ECE, I loved the idea of power electronics &mdash; real physical systems, hands-on work, things that exist in the world instead of on a screen. Most versions of that life, though, pointed somewhere I didn&rsquo;t want to go. The work isn&rsquo;t wrong, it&rsquo;s just that the life attached to it isn&rsquo;t the one I want, and pretending otherwise would just be a different kind of self-deception.</p>
+						<p>On the other end, I spent a while convincing myself that dev work at a quant firm was the end-all-be-all, and the deeper I looked the more I had to admit it isn&rsquo;t as purposeful as I&rsquo;d like. Nobody&rsquo;s life gets better because a market order fills forty nanoseconds faster. The interesting thing was realizing the pull toward it wasn&rsquo;t entirely mine. Some of it was &mdash; the problems genuinely fascinate me &mdash; and some of it was just the gravitational field of prestige and money that every ambitious kid gets caught in. Separating those two forces is a lot harder than it sounds, and I&rsquo;m not sure I&rsquo;ve fully done it yet.</p>
+						<p>Schopenhauer had a line about how we can do what we will, but we cannot will what we will. Half the battle is figuring out which of your wants are actually yours, and which ones were installed by the people around you.</p>
+
+						<h3 id="s5">Desire, Briefly</h3>
+						<p>Everything in moderation is the standard advice, and it&rsquo;s right about most things, but I think the edges of that logic are wrong in an interesting way. I haven&rsquo;t eaten dessert since I was thirteen. It&rsquo;s not a flex, and it&rsquo;s not for any dramatic reason &mdash; I just decided I wanted to be in better shape and it was an easy variable to cut. What surprised me is that it felt like it stopped costing anything almost immediately.</p>
+						<p>Moderation assumes the desire stays constant and you manage it forever, white-knuckling your way through a lifetime of small negotiations. Some desires you can just delete entirely, and once the want is gone, the deprivation is basically free. I don&rsquo;t miss dessert. I don&rsquo;t think about it. The suffering was never in not having the thing, it was in wanting it, and the version of me that removed the want is better off than the version that would have managed it in moderation forever.</p>
+						<p>The Stoics and the Buddhists converged on this same insight from opposite ends of the world: you can either chase satisfaction by acquiring more, or manufacture it by wanting less, and only one of those strategies has a finish line. I learned the underlying concept in a ninth grade classroom without absorbing a single word of it at the time.</p>
+
+						<h3 id="s6">Holding the Frame Loosely</h3>
+						<p>There&rsquo;s a version of this whole essay that sounds like I&rsquo;ve got it all figured out, and I want to be clear that I don&rsquo;t. I&rsquo;m eighteen. The plan could change, the industry I&rsquo;m aiming at could transform underneath me, and the balance I&rsquo;m describing is something I&rsquo;ll be recalibrating for the rest of my life rather than something I&rsquo;ve solved. The wants I think are mine today might turn out to be installed ones I just haven&rsquo;t noticed yet. I think the frame is right even if the specific answers move, and I&rsquo;d rather hold a good frame loosely than a bad answer tightly.</p>
+						<p>So the middle path, the version I actually live, isn&rsquo;t working a medium amount for medium money at a medium job. That&rsquo;s the misreading, the idea that the middle means mediocre. It&rsquo;s being rigorous about what every path actually costs and what it actually pays, in hours and not just dollars. It&rsquo;s refusing to treat either extreme as noble by default, because the grind isn&rsquo;t virtue, and neither is refusing to ever go hard at anything. It&rsquo;s auditing your desires and deleting the ones that only exist because everyone around you has them, then saving your full, obsessive, why-why-why intensity for the things that are actually yours.</p>
+						<p>Not sprinting until you break. Not coasting until you rot. Just finding a rhythm you can hold for an entire life, and knowing exactly when to hit harder.</p>
+
+					</div>
+
+					<div class="article-end">
+						<a href="../notes.html" class="article-back">Back to Notes</a>
+					</div>
+
+				</div>
+
+				<!-- Table of Contents -->
+				<aside class="toc">
+					<p class="toc-label">Contents</p>
+					<ol>
+						<li><a href="#s1">The Grind Isn&rsquo;t Free</a></li>
+						<li><a href="#s2">Minimum Effort, Max Return</a></li>
+						<li><a href="#s3">Happiness Is Not Pleasure</a></li>
+						<li><a href="#s4">Which Wants Are Yours</a></li>
+						<li><a href="#s5">Desire, Briefly</a></li>
+						<li><a href="#s6">Holding the Frame</a></li>
+					</ol>
+				</aside>
+
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/rishi-bala-443583258/" class="icon brands alt fa-linkedin-in"><span class="label"></span></a></li>
+				<li><a href="https://github.com/rbala25" class="icon brands alt fa-github"><span class="label"></span></a></li>
+				<li><a href="mailto:rishibala2007@gmail.com" class="icon solid alt fa-envelope"><span class="label"></span></a></li>
+				<li><a href="../images/Rishi Bala Resume.pdf" class="icon solid alt fa-file"><span class="label"></span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy;2025&ndash;2026 Rishi Bala</li>
+			</ul>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		(function () {
+			const links = document.querySelectorAll('.toc a');
+			const headings = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+			function onScroll() {
+				let active = 0;
+				headings.forEach((h, i) => { if (h && h.getBoundingClientRect().top < 140) active = i; });
+				links.forEach((a, i) => a.classList.toggle('toc-active', i === active));
+			}
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+		})();
+	</script>
+
+</body>
+
+</html>
