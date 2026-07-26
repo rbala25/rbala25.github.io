@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>&ldquo;Just Adapt&rdquo; Has Become Cope &mdash; Rishi Bala</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="icon" type="image/png" href="../pic100.ico" />
+	<style>
+		/* ── Layout ── */
+		#post {
+			padding: 9em 2em 7em;
+			min-height: 100vh;
+		}
+
+		.article-layout {
+			max-width: 74em;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 13em;
+			gap: 5em;
+			align-items: start;
+		}
+
+		/* ── Back link ── */
+		.article-back {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
+			font-size: 0.68em;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.28) !important;
+			border-bottom: 0 !important;
+			margin-bottom: 3em;
+			transition: color 0.2s ease-in-out;
+		}
+		.article-back:hover { color: #e44c65 !important; }
+		.article-back::before { content: '←'; font-size: 1.1em; }
+
+		/* ── Header ── */
+		.article-date {
+			font-size: 0.68em;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.28);
+			margin-bottom: 0.75em;
+		}
+
+		h2.article-title {
+			font-size: 2.6em;
+			line-height: 1.18em;
+			letter-spacing: -0.03em;
+			color: #ffffff;
+			font-weight: 300;
+			margin-bottom: 0;
+			padding-bottom: 1.1em;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		/* ── Body ── */
+		.article-body {
+			margin-top: 2.5em;
+			counter-reset: section;
+		}
+
+		.article-body > p {
+			font-size: 1.05em;
+			line-height: 1.95em;
+			color: rgba(255, 255, 255, 0.62);
+			margin-bottom: 1.4em;
+		}
+
+		/* Section headings */
+		.article-body h3 {
+			font-size: 1.2em;
+			font-weight: 400;
+			color: #ffffff;
+			letter-spacing: -0.01em;
+			margin: 3.25em 0 0.9em;
+			line-height: 1.4em;
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+			counter-increment: section;
+		}
+
+		.article-body h3::before {
+			content: counter(section, decimal-leading-zero) " ";
+			font-size: 0.6em;
+			letter-spacing: 0.1em;
+			color: #e44c65;
+			font-weight: 400;
+			margin-right: 0.5em;
+			vertical-align: middle;
+		}
+
+		/* ── List ── */
+		.article-body ul {
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 1.4em;
+		}
+		.article-body ul li {
+			font-size: 1.05em;
+			line-height: 1.9em;
+			color: rgba(255, 255, 255, 0.62);
+			padding-left: 1.5em;
+			position: relative;
+			margin-bottom: 0.4em;
+		}
+		.article-body ul li::before {
+			content: '—';
+			color: #e44c65;
+			position: absolute;
+			left: 0;
+		}
+
+		.article-body em {
+			color: rgba(255, 255, 255, 0.78);
+			font-style: italic;
+		}
+
+		/* ── Closing ── */
+		.article-end {
+			margin-top: 4em;
+			padding-top: 2em;
+			border-top: 1px solid rgba(255, 255, 255, 0.07);
+		}
+
+		/* ── Table of Contents sidebar ── */
+		.toc {
+			position: sticky;
+			top: 8em;
+		}
+
+		.toc-label {
+			font-size: 0.62em;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.22);
+			margin-bottom: 1em;
+		}
+
+		.toc ol {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			counter-reset: toc;
+		}
+
+		.toc ol li {
+			counter-increment: toc;
+			margin-bottom: 0.6em;
+		}
+
+		.toc ol li a {
+			font-size: 0.72em;
+			line-height: 1.5em;
+			color: rgba(255, 255, 255, 0.3) !important;
+			border-bottom: 0 !important;
+			display: flex;
+			gap: 0.6em;
+			align-items: baseline;
+			transition: color 0.15s ease-in-out;
+		}
+
+		.toc ol li a::before {
+			content: counter(toc, decimal-leading-zero);
+			font-size: 0.85em;
+			color: rgba(228, 76, 101, 0.5);
+			flex-shrink: 0;
+		}
+
+		.toc ol li a:hover { color: #ffffff !important; }
+		.toc ol li a.toc-active { color: rgba(255, 255, 255, 0.75) !important; }
+
+		/* ── Mobile: stack layout ── */
+		@media screen and (max-width: 860px) {
+			.article-layout {
+				grid-template-columns: 1fr;
+				gap: 0;
+			}
+			.toc { display: none; }
+			h2.article-title { font-size: 1.9em; }
+			.article-body > p { font-size: 0.97em; }
+			.article-body h3 { font-size: 1.05em; }
+		}
+	</style>
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload landing">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1 id="logo"><a href="../index.html">Rishi Bala</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="../index.html#one">About</a></li>
+					<li><a href="../index.html#ipc">Experience</a></li>
+					<li><a href="../index.html#five">Portfolio</a></li>
+					<li><a href="../index.html#blog">Writings</a></li>
+					<li><a href="https://github.com/rbala25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/rishi-bala-443583258/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:rishibala2007@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="../images/Rishi Bala Resume.pdf" class="icon solid alt fa-file"><span class="label">Resume</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Post -->
+		<article id="post">
+			<div class="article-layout">
+
+				<!-- Main content -->
+				<div class="article-main">
+
+					<a href="../index.html#blog" class="article-back">Writings</a>
+
+					<p class="article-date">July 25, 2026</p>
+					<h2 class="article-title">&ldquo;Just Adapt&rdquo; Has Become Cope</h2>
+
+					<div class="article-body">
+
+						<p>At the moment, every AI thread on the internet seems to split into the same two camps: the doomers, who think we&rsquo;re all just beyond cooked, and the optimists, who chant some version of &ldquo;people will always adapt, just use AI better and you&rsquo;ll be fine.&rdquo;</p>
+						<p>I really think the second group is going to get blindsided harder than anyone. Frankly, I&rsquo;d rather be a pessimistic doomer now than be shocked later.</p>
+
+						<h3 id="s1">The Advice Expired and Nobody Threw It Out</h3>
+						<p>There&rsquo;s a line that gets repeated in every one of these threads, almost word for word: &ldquo;AI won&rsquo;t replace you, someone using AI will.&rdquo; People type it out like it&rsquo;s wisdom. Maybe it was, in 2022, when knowing how to use these tools genuinely was the difference between a guy with a chainsaw and a guy with an axe, and the people who picked up the chainsaw early really did pull ahead of everyone still swinging.</p>
+						<p>I don&rsquo;t think people realize that framing is dead. The advice only works if there&rsquo;s a stable floor of human work underneath you worth competing for, and from everything I&rsquo;ve seen over the past couple years &mdash; watching what happened to entry-level hiring and watching what my own work actually consists of &mdash; the floor itself is dropping.</p>
+						<p>There&rsquo;s a quote I read online that I really like: &ldquo;Being great at AI when the floor drops doesn&rsquo;t save you. It just decides who gets the last chair when the music stops.&rdquo;</p>
+						<p>Think about an actual team. Ten engineers, AI makes each one 5x more productive, and the company doesn&rsquo;t go hire forty more engineers to celebrate, it just keeps two. Those two are great AI users, obviously, but there are still eight people gone, and no amount of prompt engineering was ever going to change that number for them.</p>
+						<p>The other thing nobody says out loud is that once everyone uses AI, using AI stops being a differentiator at all, because everyone&rsquo;s output converges toward whatever the model produces. You spent two years becoming &ldquo;AI-native&rdquo; and so did literally everybody else.</p>
+
+						<h3 id="s2">What the Job Actually Is Now</h3>
+						<p>A huge amount of white collar work right now looks like this: prompt the model, run whatever it gives you, paste the error back in, repeat until it works. For a lot of people that is genuinely the entire job, and what they&rsquo;re really doing is supervising a machine that&rsquo;s learning to not need a supervisor &mdash; one that never sleeps, never negotiates salary, and gets smarter every quarter while they stay exactly the same.</p>
+						<p>There&rsquo;s an old idea, going back to Marx of all people, about workers becoming alienated from their labor, separated from the thing they produce until the work stops feeling like theirs at all. He was describing factory workers who never saw the finished product, but I&rsquo;d argue the prompt-and-paste loop is the white collar version of the same disease. You didn&rsquo;t design the system, you didn&rsquo;t really write the code, you can&rsquo;t fully explain why it works, and at the end of the day you&rsquo;re not sure what part of the output was you. People feel this even when they can&rsquo;t name it, and I think it&rsquo;s part of why everyone in tech seems vaguely miserable right now despite the salaries.</p>
+						<p>Middling web dev is already gone. Frontend CRUD, template sites, component library stuff &mdash; that market collapsed quietly, and nobody held a funeral because everyone was too busy insisting it wasn&rsquo;t happening.</p>
+						<p>People will hit you with the calculator analogy here, the one where everybody said calculators would kill mathematicians and instead math got bigger. The problem is that the calculator wasn&rsquo;t improving itself every quarter, and it did the arithmetic underneath the mathematician&rsquo;s job rather than the job itself. The analogy describes a tool, and the thing being built now is aiming to be the worker.</p>
+						<p>Here&rsquo;s the thing though: software isn&rsquo;t even the most replaceable white collar job. It just gets the headlines because that&rsquo;s where the money is, and because the people building AI are software people watching their own field burn first.</p>
+						<p>Tax accounting is more replaceable. The tax code is a million pages of deterministic rules where inputs go in and a correct answer comes out, which is the exact shape of problem LLMs eat for breakfast, and unlike law there&rsquo;s no courtroom requirement or physical component protecting it. The whole profession was a knowledge moat, and knowledge moats are exactly what AI drains overnight. Paralegals, analysts, underwriters, most of corporate finance &mdash; same thing. Software just got hit first because code is text and the feedback loop is instant.</p>
+
+						<h3 id="s3">&ldquo;Become a Plumber&rdquo; Is the New &ldquo;Learn to Code&rdquo;</h3>
+						<p>Somebody once said the future is already here, it&rsquo;s just not evenly distributed. The trades are the unevenly distributed part, and everyone treats that like a permanent safe zone.</p>
+						<p>To be fair, robots aren&rsquo;t crawling under sinks anytime soon. Robotics lags language models by years, the physical world is brutal to automate, and I do actually believe the plumber outlives the programmer.</p>
+						<p>Automation isn&rsquo;t the only way a job dies though. Demand kills jobs too, and nobody&rsquo;s watching that door. If white collar workers lose income at scale, who&rsquo;s hiring the plumber? I know I wouldn&rsquo;t be, because if I&rsquo;m unemployed I&rsquo;m not calling a carpenter, I&rsquo;m watching a YouTube tutorial and doing it myself, badly, since I suddenly have infinite time and zero money.</p>
+						<p>So the trades survive the robots and get wrecked by the shockwave anyway &mdash; surviving the asteroid and starving in the winter after.</p>
+
+						<h3 id="s4">The Nobel Prize Hates Reddit</h3>
+						<p>The dirty secret is that the serious economics reads more doomer than the comment sections do.</p>
+						<p>Daron Acemoglu won the Nobel in economics in 2024, and he wrote a paper called <em>The Simple Macroeconomics of AI</em> that should bother both camps. The productivity miracle is way smaller than advertised: while Goldman Sachs was projecting a 7% boost to global GDP, his upper bound comes out to a 0.71% bump in total factor productivity over ten years, a number that drops to about 0.55% once he separates the tasks AI finds easy from the ones it finds hard. That&rsquo;s half a percent over a decade.</p>
+						<p>The finding that actually matters, though, is that his model predicts the capital share of national income rising while AI widens the gap between capital and labor income. In plain English, the gains don&rsquo;t flow to the workers who &ldquo;adapted&rdquo; but to whoever owns the machines.</p>
+						<p>There&rsquo;s an old line about how it&rsquo;s difficult to get a man to understand something when his salary depends on his not understanding it. Invert it and you get the comment sections, where it&rsquo;s difficult to get people to accept a finding when their entire career plan depends on it being false.</p>
+						<p>Every previous automation wave had a pressure valve, because companies needed workers, workers earned wages, wages became demand, and the loop held together even when it was ugly. AI saws at the loop itself. If value gets generated with barely any human input, capital compounds and labor just doesn&rsquo;t, and considering labor&rsquo;s share of GDP has already been bleeding out since the &rsquo;80s, this isn&rsquo;t a new wound so much as an accelerant poured on an old one.</p>
+						<p>The part that genuinely unsettles me is simpler than any of the math. The Industrial Revolution replaced muscle and pushed people into cognitive work, AI is now coming for the cognitive work, and there is nothing above cognitive work. Nobody knows what the next rung would even be, because there&rsquo;s never been one &mdash; we displaced everyone into the exact category that&rsquo;s now being automated.</p>
+
+						<h3 id="s5">The Actual AGI Question</h3>
+						<p>I go back and forth on whether current AI even gets us to AGI, and honestly I lean towards no, at least not LLMs alone. Next-token prediction turned out to be way richer than anyone expected &mdash; nobody explicitly programmed these things to code or do math or reason and all of that just emerged from predicting text &mdash; but there are still missing pieces: persistent memory, continuous learning, actual interaction with the world. If you teach me Rust today I know Rust tomorrow, whereas every frontier model freezes the day training ends. AGI is probably an LLM plus memory plus planning plus a bunch of scaffolding wrapped around it, not just a bigger transformer.</p>
+						<p>Here&rsquo;s a weirder thought I keep coming back to though. LLMs might have actually slowed AGI research down. Chatbots became so commercially successful that billions of dollars got redirected into making better chatbots and better copilots instead of exploring genuinely different architectures, because when the thing you already have prints money, nobody funds the risky alternative. Research didn&rsquo;t stop, it just all bent toward the product. Maybe that&rsquo;s fine, and maybe LLMs are the road anyway &mdash; but if they&rsquo;re a local maximum, we&rsquo;ve been pouring the GDP of a small country into climbing the wrong hill.</p>
+						<p>The reason I even care about the distinction is what actual AGI does to the economics. Picture the logical endpoint: a company that consists of a CEO, a CTO, and compute, with genuinely nobody else &mdash; no analysts, engineers, accountants, or middle anything &mdash; where revenue per employee goes to infinity and employment goes to approximately zero. Every incentive in a market economy points directly at that outcome. That&rsquo;s not &ldquo;inequality gets worse.&rdquo; That&rsquo;s inequality of a kind we have literally never seen, because every previous rich person in history still needed people.</p>
+						<p>I&rsquo;m not certain AGI happens. Maybe LLMs plateau, maybe the whole thing slows down, and honestly some part of me hopes it does. But &ldquo;high chance this leads to the most extreme concentration of wealth in human history&rdquo; is not a fringe take, it&rsquo;s just the default trajectory if nobody steers.</p>
+
+						<h3 id="s6">Nobody Is Steering</h3>
+						<p>This is probably the real core of my pessimism, more than anything about the technology itself. I have basically zero faith in the two groups of people who would need to handle this well &mdash; business leadership and government &mdash; and I don&rsquo;t think that&rsquo;s cynicism so much as pattern recognition.</p>
+						<p>Start with the companies. People love to argue that firms won&rsquo;t gut their junior ranks because they&rsquo;d be destroying their own future senior talent, and that sounds reasonable right up until you look at literally any precedent. Banks gutted their trading floors after 2008 and electronification, fully aware it would hollow out the pipeline of people who understood markets, because the short-term math won firm by firm like it always does. Manufacturing got offshored in a generation by executives who understood perfectly well what it would do to their towns and supply chains and did it anyway. Companies today announce record profits and mass layoffs in the same earnings call, spend the savings on buybacks, and get rewarded by the market for it. The idea that these same institutions will show restraint with AI &mdash; voluntarily keeping expensive humans around to protect a talent pipeline that pays off in fifteen years &mdash; is honestly one of the funniest things people believe. No individual executive is paid to care about fifteen years from now, so each firm defects, every firm defects, and everyone acts shocked at the collective outcome. It&rsquo;s the oldest trap in game theory, and knowing the trap exists has never once stopped anyone from walking into it.</p>
+						<p>Government is somehow less reassuring. These are the people who held hearings on social media a full decade after it had rewired society, where senators asked Zuckerberg how Facebook makes money and he had to explain, to the people regulating him, &ldquo;Senator, we run ads.&rdquo; Congress has an average age closer to retirement than to the workforce being disrupted, moves on legislative timescales of years for problems that compound monthly, and has passed essentially nothing meaningful on tech in twenty years despite social media, gig work, crypto, and now this. The realistic sequence isn&rsquo;t foresight and smart redistribution &mdash; it&rsquo;s that nothing happens until unemployment is visibly ugly, then there&rsquo;s a decade of hearings and half-measures, and whatever eventually passes is written with heavy input from the exact companies it&rsquo;s supposed to constrain.</p>
+						<p>So when people say &ldquo;society will adapt,&rdquo; I want to know who specifically they mean. Which institution? The companies are structurally incapable of restraint, the government is structurally incapable of speed, and the mismatch between those two facts is where all the damage lives.</p>
+
+						<h3 id="s7">The Finance Pipeline Problem</h3>
+						<p>I know plenty of people headed into IB, so I&rsquo;ve thought about this more than I&rsquo;d like to admit.</p>
+						<p>The analyst layer is toast. Modeling, comps, deck assembly, DCFs &mdash; all of it automatable now or within a couple years, and given everything I just said about institutional restraint, you can guess my prediction on whether banks protect their analyst classes.</p>
+						<p>Senior banking is different, for now. An MD&rsquo;s real product is trust &mdash; the ability to manage the egos in a $4B merger or tell a board their valuation is delusional and actually be believed &mdash; and AI doesn&rsquo;t have twenty years of dinners with CFOs.</p>
+						<p>There&rsquo;s a bomb in the basement though. Kill the analyst class and you kill the pipeline, because MDs are made, not born, and they learned the craft grinding as juniors. Delete the bottom rung and in fifteen years the penthouse is full of retirees with nobody on the stairs.</p>
+
+						<h3 id="s8">Consulting Is Already Soulless</h3>
+						<p>I think consulting is a soulless waste of talent, and AI is about to prove it.</p>
+						<p>I want to be upfront that I&rsquo;m biased here, probably heavily. I&rsquo;m sure there are people who genuinely love consulting, who find real meaning in the variety and the exposure, and I&rsquo;m not claiming they&rsquo;re wrong about their own lives &mdash; I just can&rsquo;t process it. Something in me cannot understand taking some of the sharpest graduates in the country, people who could be building things, and paying them to produce slide decks about other people&rsquo;s decisions. I think big 4 consulting is one of the least passionate jobs out there, where the prestige is the product and the work is some gutted form of packaging that we place on a pedestal. Maybe that says more about what I value than about the industry, but it&rsquo;s still how I feel.</p>
+						<p>That part bothers me on a deeper level than the economics. Thoreau had that line about how the mass of men lead lives of quiet desperation, and I think about how it applies to a 22-year-old who wanted to build things, took the prestige path because everyone around them was taking it, and wakes up at 40 having produced nothing but decks. The tragedy isn&rsquo;t that AI kills that job &mdash; it&rsquo;s how many people spent their one shot at a working life on it before AI got the chance.</p>
+						<p>Here&rsquo;s the part that&rsquo;s less about my bias: junior consulting is structured information synthesis, which is LLM lunch. If a profession&rsquo;s core output can be generated by a model in forty seconds, that tells you something about how much the profession was ever really producing.</p>
+						<p>Senior consulting will survive, but for the most cynical reason imaginable: professional blame absorption. The CEO already decided to fire 20% of the company, and McKinsey exists so the board blames McKinsey instead. An AI cannot be a scapegoat &mdash; you can&rsquo;t fire a model and feel closure. The moat isn&rsquo;t intelligence, it&rsquo;s liability laundering with a prestige logo on it, and if that&rsquo;s the durable core of the industry, honestly, the industry deserved the disruption.</p>
+
+						<h3 id="s9">Quant Just Dies</h3>
+						<p>You&rsquo;d assume quant is safe &mdash; smartest people alive, hardest math, most money. I think it might be the most doomed field of all, and the reason is kind of elegant.</p>
+						<p>Finding alpha is pattern recognition in noisy high-dimensional data, which is literally the textbook description of what ML does. But capability isn&rsquo;t even the kill shot here. Convergence is. Markets are adversarial and zero-sum, so if every firm runs similar frontier AI, they all find the same signals at the same time, the trades get crowded instantly, and the alpha stops existing as a concept.</p>
+						<p>Human quants don&rsquo;t get outcompeted exactly, the game just becomes unplayable by humans, and whoever owns the best system takes everything while the winnings concentrate into fewer hands than even finance is used to. Notice that&rsquo;s the same CEO-CTO-and-compute endpoint again &mdash; quant just gets there first, because the output is measured in dollars and the feedback loop is instant.</p>
+
+						<h3 id="s10">What&rsquo;s Actually Left</h3>
+						<p>The honest list is embarrassingly short.</p>
+						<ul>
+							<li>Physical work in messy environments. Longest runway, thinnest moat over time.</li>
+							<li>Jobs where the human presence is the product &mdash; therapy, caregiving, early education. Real, but way smaller than people pretend.</li>
+							<li>Senior judgment roles with real accountability. Safe-ish, except the ladder to reach them is actively on fire.</li>
+							<li>Frontier research. Shrinks as models improve, but doesn&rsquo;t hit zero fast.</li>
+						</ul>
+						<p>People bring up the accountability argument here &mdash; the idea that you&rsquo;ll always want a human lawyer signing off &mdash; and I don&rsquo;t buy it. If the AI is better and cheaper, I&rsquo;m not paying a premium for a human out of sentimentality. Licensing laws will slow the bleed for a decade or so, but preferences won&rsquo;t slow anything.</p>
+						<p>Hardware, where I&rsquo;m headed, buys time rather than immunity. Debugging a board that&rsquo;s physically arcing at you is coupled to reality in a way text never is, and the longer timeline genuinely matters when you&rsquo;re entering the market in a few years. Anyone in tech promising a 15-year guarantee, though, is selling a bridge.</p>
+
+						<h3 id="s11">The Question Under the Question</h3>
+						<p>There&rsquo;s something underneath all the job talk that I think is the actual issue, and almost nobody wants to touch it.</p>
+						<p>Keynes predicted in 1930 that by now &mdash; his grandchildren&rsquo;s generation &mdash; we&rsquo;d be working fifteen-hour weeks, because productivity would rise so much that the economic problem would basically be solved and the real challenge would be figuring out what to do with all the leisure. He got the productivity right, almost exactly, but the fifteen-hour week never showed up. We took every productivity gain of the last century and converted it into more output and more consumption rather than more freedom. The constraint was never technological. We could have chosen leisure decades ago; we chose growth every single time, and I see no reason to believe AI changes the choosing.</p>
+						<p>The deeper problem is what work became in the meantime. Somewhere along the way, at least in America, your job stopped being what you do and became what you are. The first question at every party is what do you do &mdash; your degree, your title, your comp, that&rsquo;s the identity stack, and I&rsquo;m not exempt from this at all. So when I say AI threatens jobs, I don&rsquo;t just mean income. I mean that millions of people built their entire sense of worth on being economically useful, and usefulness is exactly the thing being automated. UBI, even if it somehow passed, solves the money and not that. Nobody&rsquo;s identity survives on a stipend.</p>
+						<p>The ancient Greeks thought about this in almost the opposite direction. For Aristotle, work was what you did so that you could get to the actual point of life &mdash; contemplation, citizenship, leisure in the serious sense of the word. Labor was the means and never the meaning. We inverted that completely, made the labor the meaning, and now we&rsquo;ve built a machine that does the labor. If we&rsquo;re lucky, AGI forces the question Keynes thought we&rsquo;d have answered by now &mdash; what humans are actually for when they&rsquo;re not needed for production. If we&rsquo;re unlucky, we get the answer by default, decided by whoever owns the compute.</p>
+						<p>I genuinely don&rsquo;t know which way that goes. I just notice that &ldquo;what is a person for&rdquo; used to be a philosophy seminar question, and sometime in the next couple decades it becomes a policy question, and nothing about our current institutions suggests we&rsquo;re ready to answer it.</p>
+
+						<h3 id="s12">The Ending Is Boring, Which Is Probably Worse</h3>
+						<p>There&rsquo;s an exchange in a Hemingway novel where a guy gets asked how he went bankrupt. &ldquo;Two ways,&rdquo; he says. &ldquo;Gradually, then suddenly.&rdquo;</p>
+						<p>That&rsquo;s the timeline I&rsquo;d bet on. The likely bad outcome isn&rsquo;t Terminator, and it&rsquo;s not even a crash &mdash; it&rsquo;s a slow grind that never makes a headline until one day it&rsquo;s everywhere at once. Enormous productivity gains pooled at the top, median wages flat or sliding while inequality stretches wider every year, institutions built for a slower century wheezing to keep up. A world that gets richer on paper and worse to live in, both at once, no contradiction.</p>
+						<p>Extreme inequality doesn&rsquo;t just feel unfair, it breaks countries. When economic dislocation outruns institutional adaptation, the political center doesn&rsquo;t bend, it snaps. There&rsquo;s a line from an Italian political prisoner writing in the 1930s that fits better than anything modern: the old world is dying, the new world struggles to be born, and now is the time of monsters.</p>
+						<p>Could I be wrong? Obviously. Progress might stall, governments might actually redistribute for once, some new tier of human work might materialize the way offices materialized above farms. &ldquo;It worked out last time&rdquo; is not a plan though, it&rsquo;s a prayer.</p>
+						<p>Pessimism gets treated like a personality flaw, and I think it&rsquo;s just paying attention with your eyes open. The alternative to pessimism was never optimism, it&rsquo;s complacency, and the people typing &ldquo;you&rsquo;ll be fine, just use AI better&rdquo; from a job that&rsquo;s next in the queue are going to be the least prepared people on the planet.</p>
+						<p>The opposite of doomerism isn&rsquo;t optimism.</p>
+						<p>It&rsquo;s denial.</p>
+
+					</div>
+
+					<div class="article-end">
+						<a href="../index.html#blog" class="article-back">Back to Writings</a>
+					</div>
+
+				</div>
+
+				<!-- Table of Contents -->
+				<aside class="toc">
+					<p class="toc-label">Contents</p>
+					<ol>
+						<li><a href="#s1">The Advice Expired</a></li>
+						<li><a href="#s2">What the Job Is Now</a></li>
+						<li><a href="#s3">Become a Plumber</a></li>
+						<li><a href="#s4">The Nobel Prize</a></li>
+						<li><a href="#s5">The AGI Question</a></li>
+						<li><a href="#s6">Nobody Is Steering</a></li>
+						<li><a href="#s7">Finance Pipeline</a></li>
+						<li><a href="#s8">Consulting</a></li>
+						<li><a href="#s9">Quant Just Dies</a></li>
+						<li><a href="#s10">What&rsquo;s Left</a></li>
+						<li><a href="#s11">The Real Question</a></li>
+						<li><a href="#s12">The Ending</a></li>
+					</ol>
+				</aside>
+
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/rishi-bala-443583258/" class="icon brands alt fa-linkedin-in"><span class="label"></span></a></li>
+				<li><a href="https://github.com/rbala25" class="icon brands alt fa-github"><span class="label"></span></a></li>
+				<li><a href="mailto:rishibala2007@gmail.com" class="icon solid alt fa-envelope"><span class="label"></span></a></li>
+				<li><a href="../images/Rishi Bala Resume.pdf" class="icon solid alt fa-file"><span class="label"></span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy;2025&ndash;2026 Rishi Bala</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		// Highlight active TOC link on scroll
+		(function () {
+			const links = document.querySelectorAll('.toc a');
+			const headings = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+			function onScroll() {
+				let active = 0;
+				headings.forEach((h, i) => {
+					if (h && h.getBoundingClientRect().top < 140) active = i;
+				});
+				links.forEach((a, i) => a.classList.toggle('toc-active', i === active));
+			}
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+		})();
+	</script>
+
+</body>
+
+</html>

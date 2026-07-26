@@ -2892,7 +2892,8 @@ ul.actions.fit.stacked {
 	width: 75%;
 }
 
-#pmaj {
+#pmaj,
+.pmaj {
 	margin-bottom: 0.5em;
 }
 
@@ -4565,4 +4566,206 @@ body.is-touch #banner {
 		font-size: 1.65em;
 	}
 
+}
+
+/* Nav text links */
+
+#nav a:not(.icon) {
+	border-bottom: 0;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: color 0.2s ease-in-out;
+}
+
+#nav a:not(.icon):hover {
+	color: #ffffff !important;
+}
+
+/* Custom contentul bullets */
+
+.contentul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.contentul li {
+	padding-left: 1.3em;
+	position: relative;
+	margin-bottom: 0.3em;
+}
+
+.contentul li::before {
+	content: '—';
+	color: #e44c65;
+	position: absolute;
+	left: 0;
+	font-weight: 300;
+}
+
+/* Portfolio cards */
+
+#five .box.alt section {
+	background: rgba(255, 255, 255, 0.025);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07), 0 4px 12px rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	border-top: 2px solid rgba(228, 76, 101, 0.35);
+	padding: 1.75em 1.5em;
+	transition: box-shadow 0.2s ease-in-out, border-top-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+}
+
+#five .box.alt section:hover {
+	background: rgba(255, 255, 255, 0.04);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.13), 0 6px 20px rgba(0, 0, 0, 0.3);
+	border-top-color: #e44c65;
+}
+
+/* Project category tags */
+
+.proj-tag {
+	display: inline-block;
+	font-size: 0.62em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(228, 76, 101, 0.8);
+	border: 1px solid rgba(228, 76, 101, 0.22);
+	border-radius: 3px;
+	padding: 0.25em 0.65em;
+	margin-bottom: 1.1em;
+	font-weight: 300;
+	width: fit-content;
+}
+
+/* Portfolio date (h5) */
+
+#five h5 {
+	color: rgba(255, 255, 255, 0.38);
+	font-size: 0.72em;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	margin-bottom: 0.9em;
+}
+
+/* Tech stack line in experience spotlight sections */
+
+.tech-stack {
+	font-size: 0.7em;
+	letter-spacing: 0.09em;
+	color: rgba(255, 255, 255, 0.32);
+	text-transform: uppercase;
+	margin-top: -0.5em;
+	margin-bottom: 1.5em;
+	font-weight: 300;
+}
+
+/* pmaj class (formerly id="pmaj") */
+
+.pmaj {
+	margin-bottom: 0.5em;
+}
+
+/* Portfolio link buttons */
+
+.proj-links {
+	margin-top: auto;
+	padding-top: 1.1em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45em;
+}
+
+.proj-link-btn {
+	display: inline-block;
+	font-size: 0.66em;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.5) !important;
+	border: 1px solid rgba(255, 255, 255, 0.14) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+	border-radius: 3px;
+	padding: 0.3em 0.75em;
+	line-height: 2;
+	white-space: nowrap;
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.proj-link-btn:hover {
+	color: #ffffff !important;
+	border-color: rgba(255, 255, 255, 0.38) !important;
+	border-bottom-color: rgba(255, 255, 255, 0.38) !important;
+}
+
+.proj-link-btn[href*="github"]::before,
+.proj-link-btn.proj-github::before {
+	font-family: 'Font Awesome 5 Brands';
+	content: '\f09b';
+	margin-right: 0.45em;
+	font-weight: 400;
+}
+
+.proj-link-btn[href*="drive.google"]::before,
+.proj-link-btn.proj-photos::before {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f03e';
+	margin-right: 0.45em;
+	font-weight: 900;
+}
+
+/* About section resume button */
+
+.button1:hover {
+	box-shadow: inset 0 0 0 1px #e44c65;
+	color: #e44c65 !important;
+}
+
+/* Blog */
+
+#blog {
+	background: #20212e;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-list {
+	max-width: 46em;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.blog-card {
+	border-left: 0.18em solid rgba(228, 76, 101, 0.35);
+	padding: 0.1em 0 0 1.75em;
+	margin-bottom: 2.75em;
+	transition: border-left-color 0.2s ease-in-out;
+}
+
+.blog-card:last-child {
+	margin-bottom: 0;
+}
+
+.blog-card:hover {
+	border-left-color: #e44c65;
+}
+
+.blog-card h3 {
+	margin-bottom: 0.5em;
+	font-size: 1.2em;
+}
+
+.blog-card .blog-date {
+	font-size: 0.7em;
+	color: rgba(255, 255, 255, 0.35);
+	margin-bottom: 0.5em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.blog-card p:not(.blog-date) {
+	font-size: 0.9em;
+	line-height: 1.85em;
+	margin-bottom: 1.1em;
+	color: rgba(255, 255, 255, 0.65);
 }
