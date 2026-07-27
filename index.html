@@ -24,7 +24,6 @@
 					<li><a href="#one" class="scrolly">About</a></li>
 					<li><a href="#ipc" class="scrolly">Experience</a></li>
 					<li><a href="#five" class="scrolly">Portfolio</a></li>
-					<li><a href="notes.html">Notes</a></li>
 					<li><a href="https://github.com/rbala25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="https://www.linkedin.com/in/rishi-bala-443583258/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 					<li><a href="mailto:rishibala2007@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
@@ -199,20 +198,32 @@
 
 						<!-- VCU — newest first -->
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="proj-tag">Embedded &middot; C++</span>
+							<span class="proj-tag">Embedded &middot; Hardware</span>
 							<h3 class="pmaj">Vehicle Control Unit (VCU)</h3>
 							<h5>July 2026 &ndash; Present</h5>
 							<ul class="contentul">
-								<li>Designed the Vehicle Control Unit; managed torque arbitration, BSPD logic,
-									drivetrain control, and real-time vehicle coordination.</li>
-								<li>Implemented torque vectoring, traction control algorithms, and thermal monitoring
-									to improve vehicle stability and performance.</li>
-								<li>Architected low-latency embedded firmware and deterministic CAN communication for
-									real-time control and telemetry.</li>
+								<li>Designed and built the VCU end to end in KiCad around an STM32G474; architected the analog front end (TVS, dividers, RC filtering, op-amp buffers) sizing every channel for STM32 ADC integrity.</li>
+								<li>Arbitrated torque across APPS, regen, and torque-vectoring inputs, resolving driver intent against grip and thermal limits; wrote the ready-to-drive state machine and sensor plausibility checks in FreeRTOS.</li>
+								<li>Built hardware-only safety logic (BSPD, shutdown sequencing) enforced independently of firmware; sensed both ends of the 24V shutdown loop so firmware can localize whether it opened upstream or at the VCU&rsquo;s own relay.</li>
 							</ul>
 							<div class="proj-links">
-								<a href="#" class="proj-link-btn proj-github">GitHub</a>
-								<a href="#" class="proj-link-btn proj-photos">Photos</a>
+								<a href="https://github.com/LonghornRacingElectric/lhre-hardware" class="proj-link-btn">Hardware</a>
+								<a href="https://github.com/LonghornRacingElectric/lhre" class="proj-link-btn">Firmware</a>
+							</div>
+						</section>
+
+						<!-- Argus -->
+						<section class="col-4 col-6-medium col-12-xsmall">
+							<span class="proj-tag">FPGA &middot; SystemVerilog</span>
+							<h3 class="pmaj">FPGA Pattern-Matching Accelerator with Cache Hierarchy</h3>
+							<h5>June 2026 &ndash; Present</h5>
+							<ul class="contentul">
+								<li>Building an FPGA Aho-Corasick multi-pattern matching accelerator in SystemVerilog on an Arty A7 for IDS-style byte streams.</li>
+								<li>Placed the oversized transition table behind a latency-modeled memory, fronted by an SRAM cache exploiting state locality; sweeping LRU, FIFO, and random eviction against a novel static placement that pins the automaton&rsquo;s highest-traffic rows in BRAM.</li>
+								<li>Verifying in a UVM environment against a Python reference model that generates the ground-truth transition tables.</li>
+							</ul>
+							<div class="proj-links">
+								<a href="https://github.com/rbala25/Argus" class="proj-link-btn">GitHub</a>
 							</div>
 						</section>
 
@@ -262,9 +273,9 @@
 						<section class="col-4 col-6-medium col-12-xsmall">
 							<span class="proj-tag">Embedded &middot; C</span>
 							<h3 class="pmaj">Embedded Shuffleboard</h3>
-							<h5>March 2026 &ndash; Present</h5>
+							<h5>March 2026 &ndash; April 2026</h5>
 							<ul class="contentul">
-								<li>Designing a multiplayer embedded shuffleboard platform as the ECE319H (Embedded
+								<li>Built a multiplayer embedded shuffleboard platform as the ECE319H (Embedded
 									Systems) final project.</li>
 								<li>Implemented mixed-signal I/O, comparator logic with multiplexer selection,
 									visual/auditory feedback, and an 8-segment display driver.</li>
@@ -296,20 +307,6 @@
 							</div>
 						</section>
 
-						<!-- 6502 Breadboard Computer -->
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="proj-tag">Computer Architecture &middot; Assembly</span>
-							<h3 class="pmaj">6502 Breadboard Computer</h3>
-							<h5>August 2024 &ndash; December 2024</h5>
-							<ul class="contentul">
-								<li>Built a breadboard computer using the classic 6502 microprocessor.</li>
-								<li>Programmed simple instructions and games in assembly.</li>
-								<li>Created a custom clock module using a separate Arduino Uno; used an Arduino Mega to
-									communicate with the 6502 computer.</li>
-								<li>Utilized an EEPROM chip to store machine code and communicate with the processor;
-									used several LCD displays and an array of electronics.</li>
-							</ul>
-						</section>
 
 					</div>
 				</div>
