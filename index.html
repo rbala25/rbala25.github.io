@@ -39,7 +39,7 @@
 					<h2>Rishi Bala</h2>
 					<p>ECE &amp; Business Honors &nbsp;&middot;&nbsp; <strong>UT Austin</strong>
 						<br>
-						Embedded Systems &nbsp;&middot;&nbsp; Computer Architecture &nbsp;&middot;&nbsp; Low-Latency Design
+						Digital Design &amp; Verification &nbsp;&middot;&nbsp; Embedded Systems &nbsp;&middot;&nbsp; Computer Architecture
 					</p>
 				</header>
 				<span class="image"><img src="images/pic00.jpg" alt="" /></span>
@@ -67,16 +67,14 @@
 						</div>
 						<div class="col-4 col-12-medium">
 							<p>Currently at UT Austin, I serve as the Controls System Lead for Longhorn Racing Electric,
-								competing in the Formula SAE International Competition. I am working on the car's main
-								Vehicle Control Unit, implementing torque vectoring and traction
-								control,
-								and coordinating cross-functional integration across mechanical and high-voltage
-								subteams.
-								Likewise, I am interning as
-								an Embedded Firmware Intern at IPC Systems in New York, working on latency-critical
-								turret firmware in C/C++ and Rust. Through these experiences, I&#x2019;ve developed a
-								strong interest in embedded systems, computer architecture, and low-latency system
-								design.
+								owning the full design cycle on the car&#x2019;s Vehicle Control Unit &#x2014; from
+								KiCad schematic and PCB layout through FreeRTOS firmware and safety logic. Alongside
+								that, I build FPGA projects in SystemVerilog: a pipelined CME market making engine
+								targeting sub-&#x03BC;s tick-to-order latency, and a UVM-verified Aho-Corasick
+								pattern-matching accelerator. I also intern as an Embedded Firmware Intern at IPC
+								Systems in New York on latency-critical turret firmware in C/C++ and Rust. Through
+								these experiences, I&#x2019;ve developed a strong interest in digital design and
+								verification, embedded and firmware development, and computer architecture.
 							</p>
 						</div>
 					</div>
@@ -111,12 +109,12 @@
 				<header>
 					<h2>Controls System Lead</h2>
 					<p>Longhorn Racing &ndash; Electric &nbsp;&middot;&nbsp; August 2025 &ndash; Present</p>
-					<p class="tech-stack">C &nbsp;&middot;&nbsp; STM32 &nbsp;&middot;&nbsp; CAN &nbsp;&middot;&nbsp; FreeRTOS</p>
+					<p class="tech-stack">C &nbsp;&middot;&nbsp; STM32 &nbsp;&middot;&nbsp; CAN &nbsp;&middot;&nbsp; FreeRTOS &nbsp;&middot;&nbsp; KiCad</p>
 				</header>
 				<p>
 				<ul class="contentul">
-					<li>Implemented real-time torque arbitration, torque vectoring, and traction control with
-						deterministic CAN I/O and BSPD safety logic.</li>
+					<li>Implemented real-time torque arbitration, torque vectoring, and traction control
+						across all drive modes with deterministic CAN I/O.</li>
 					<li>Built STM32 embedded control and telemetry systems with CAN networking, multi-sensor
 						interfacing, and real-time firmware.</li>
 					<li>Integrated safety interlocks, fault detection, and watchdog logic across all vehicle
@@ -124,7 +122,7 @@
 					<li>Designed an automotive-grade wiring harness, including connector selection, crimping,
 						CAN routing, and full-vehicle integration.</li>
 					<li>Coordinated cross-functional integration with mechanical and high-voltage subteams,
-						logging 100+ miles of vehicle testing and achieving a top-5 finish at the Formula SAE
+						logging 250+ miles of vehicle testing and achieving a top-5 finish at the Formula SAE
 						International Competition.</li>
 				</ul>
 				</p>
@@ -198,7 +196,7 @@
 
 						<!-- VCU — newest first -->
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="proj-tag">Embedded &middot; Hardware</span>
+							<span class="proj-tag">Hardware &middot; PCB Design &middot; KiCad</span>
 							<h3 class="pmaj">Vehicle Control Unit (VCU)</h3>
 							<h5>July 2026 &ndash; Present</h5>
 							<ul class="contentul">
@@ -214,7 +212,7 @@
 
 						<!-- Argus -->
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="proj-tag">FPGA &middot; SystemVerilog</span>
+							<span class="proj-tag">FPGA &middot; SystemVerilog &middot; UVM</span>
 							<h3 class="pmaj">FPGA Pattern-Matching Accelerator with Cache Hierarchy</h3>
 							<h5>June 2026 &ndash; Present</h5>
 							<ul class="contentul">
@@ -242,6 +240,8 @@
 								<li>Built a quoting engine computing VWAP mid-price via a pipelined 64-bit integer
 									divider, adjusting quotes for inventory skew and an OFI signal from real-time
 									aggressor trade data.</li>
+								<li>Wrote self-checking testbenches for all 25 modules with reference-model checking;
+									brought the full design up on an Arty A7 with a DP83848 MII PHY.</li>
 							</ul>
 							<div class="proj-links">
 								<a href="https://github.com/rbala25/Hermes" class="proj-link-btn">GitHub</a>
@@ -250,7 +250,7 @@
 
 						<!-- TSM -->
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="proj-tag">Embedded &middot; Hardware</span>
+							<span class="proj-tag">Hardware &middot; PCB Design &middot; KiCad</span>
 							<h3 class="pmaj">Thermal Sensor Module (TSM)</h3>
 							<h5>August 2025 &ndash; April 2026</h5>
 							<ul class="contentul">
