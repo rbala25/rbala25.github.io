@@ -88,14 +88,14 @@
 			<div class="content">
 				<header>
 					<h2>Embedded Firmware Intern</h2>
-					<p>IPC Systems &nbsp;&middot;&nbsp; May 2026 &ndash; August 2026</p>
-					<p class="tech-stack">C &nbsp;&middot;&nbsp; C++ &nbsp;&middot;&nbsp; Rust</p>
+					<p>IPC Systems &nbsp;&middot;&nbsp; May 2026 &ndash; Present</p>
+					<p class="tech-stack">C &nbsp;&middot;&nbsp; C++ &nbsp;&middot;&nbsp; Rust &nbsp;&middot;&nbsp; GStreamer &nbsp;&middot;&nbsp; Wayland</p>
 				</header>
 				<ul class="contentul">
-					<li>Developing latency-critical turret control firmware in C/C++ and Rust for IPC&rsquo;s financial communication infrastructure, deployed at trading desks across major global financial institutions.</li>
-					<li>Applying Rust in a production embedded codebase to enforce memory safety without garbage collection overhead, eliminating a class of latency unpredictability in timing-critical paths.</li>
-					<li>Profiling and optimizing real-time firmware to meet strict determinism and uptime requirements on always-on trading floor hardware.</li>
-					<li>Collaborating with hardware and software teams on system integration, validation, and performance profiling across turret hardware.</li>
+					<li>Replaced polling-based turret screenshot delivery with live streaming by benchmarking VNC and WebRTC pipelines on embedded Linux BSP hardware, measuring end-to-end frame latency to drive a production protocol decision for financial trading floors.</li>
+					<li>Instrumented the embedded turret diagnostics pipeline, pulling live performance metrics from all trading floor endpoints.</li>
+					<li>Extended the Rust/Tauri hardware interface with WAMP command surfaces, bridging the turret BSP to a desktop viewer.</li>
+					<li>Worked with senior engineers to design the hardware-software stack covering BSP daemons in C/C++ with GStreamer and Wayland, an encrypted transport layer, and the Rust/Tauri viewer, tracing the full signal path from turret BSP to trading floor desktop.</li>
 				</ul>
 			</div>
 
@@ -210,11 +210,12 @@
 						<section class="col-4 col-6-medium col-12-xsmall">
 							<span class="proj-tag">FPGA &middot; SystemVerilog &middot; UVM</span>
 							<h3 class="pmaj">FPGA Pattern-Matching Accelerator with Cache Hierarchy</h3>
-							<h5>June 2026 &ndash; Present</h5>
+							<h5>June 2026 &ndash; August 2026</h5>
 							<ul class="contentul">
-								<li>Building an FPGA Aho-Corasick multi-pattern matching accelerator in SystemVerilog on an Arty A7 for IDS-style byte streams.</li>
-								<li>Placed the oversized transition table behind a latency-modeled memory, fronted by an SRAM cache exploiting state locality; sweeping LRU, FIFO, and random eviction against a novel static placement that pins the automaton&rsquo;s highest-traffic rows in BRAM.</li>
-								<li>Verifying in a UVM environment against a Python reference model that generates the ground-truth transition tables.</li>
+								<li>Built an FPGA Aho-Corasick multi-pattern matching accelerator in SystemVerilog on an Arty A7 for streaming byte inputs.</li>
+								<li>Placed the oversized transition table behind a latency-modeled memory, fronted by an SRAM cache exploiting state locality; swept LRU, FIFO, and random replacement against a novel static placement pinning high-traffic automaton rows in BRAM.</li>
+								<li>Static placement hit 34 vs. 26 for FIFO/random (31% improvement, zero warmup overhead), with no runtime cost where access is statically fixed.</li>
+								<li>Verified all four replacement policies in UVM with 0 errors and 0 fatals across a 47-byte multi-pattern stream; wrote a Python reference model to generate Aho-Corasick automata and transition tables as ground truth.</li>
 							</ul>
 							<div class="proj-links">
 								<a href="https://github.com/rbala25/Argus" class="proj-link-btn">GitHub</a>
